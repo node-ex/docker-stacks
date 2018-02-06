@@ -78,6 +78,8 @@ RUN conda install --quiet --yes \
     'notebook=5.2.*' \
     'jupyterhub=0.8.*' \
     'jupyterlab=0.31.*' \
+    && conda install --quiet --yes -c conda-forge \
+        jupyter_contrib_nbextensions \
     && conda clean -tipsy && \
     jupyter labextension install @jupyterlab/hub-extension@^0.8.0 && \
     npm cache clean && \
